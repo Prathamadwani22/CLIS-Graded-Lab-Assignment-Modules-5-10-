@@ -56,14 +56,7 @@ elif [ -d "$1" ]; then
 else
     echo "Error: Invalid input."
 fi
-(Three backticks, nothing else, on a new line)
 
-### ✅ It must look like this:
-
-```md
-elif [ -d "$1" ]; then
-    ...
-fi
 
 The script validates the argument count, checks whether the path exists, and performs file or directory analysis accordingly.
 ---
