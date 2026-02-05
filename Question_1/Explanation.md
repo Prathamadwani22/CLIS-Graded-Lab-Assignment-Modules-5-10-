@@ -69,3 +69,45 @@ $ chmod +x analyze.sh
 
 ![Make Executable](Snapshots/step_3.png)
 
+---
+
+### 5. Creating a Sample File for Testing
+
+$ echo "Hello world this is a test file" > sample.txt
+- This command creates a sample text file to test the file analysis functionality of the script.
+
+![Create Sample File](Snapshots/step_4.png)
+[sample.txt](sample.txt)
+---
+
+### 6. Executing Script with File Argument
+
+$ ./analyze.sh sample.txt
+- The script identifies the argument as a file and displays the number of lines, words, and characters present in it.
+
+![File Analysis Output](Snapshots/step_5.png)
+---
+
+### 7. Executing Script with Directory Argument
+
+$ ./analyze.sh .
+- The script identifies the argument as a directory and displays the total number of files and the number of `.txt` files present.
+
+![Directory Analysis Output](Snapshots/step_6.png)
+---
+
+### 8. Executing Script with No Arguments
+
+$ ./analyze.sh
+- Since no argument is provided, the script correctly displays an error message for invalid argument count.
+
+![No Argument Error](Snapshots/step_7.png)
+---
+
+### 9. Executing Script with Invalid Path
+
+$ ./analyze.sh invalid_path
+- The script detects that the provided path does not exist and displays an appropriate error message.
+
+![Invalid Path Error](Snapshots/step_8.png)
+
