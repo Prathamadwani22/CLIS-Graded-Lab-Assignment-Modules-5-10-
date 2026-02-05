@@ -10,9 +10,6 @@ $ touch validate_results.sh
 
 ![Create Script](Snapshots/step_1.png)
 
-- This command creates an empty shell script file that will be used to validate student results based on marks.
-
-![Create Script](Snapshots/step_1.png)
 $ nano validate_results.sh
 - This command opens the `validate_results.sh` file in the nano editor to write the logic for reading student marks, validating results, and categorizing students.
 
