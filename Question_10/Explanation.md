@@ -110,6 +110,17 @@ $ ./signal_demo
 
 ### 6. Handling SIGTERM Signal
 
-- After 5 seconds, the first child process sends a SIGTERM signal to the parent.
-- The parent handles SIGTERM by printing a message and continues execution.
+- After 5 seconds, the first child process sends a `SIGTERM` signal to the parent process.
+- The parent process handles the signal by printing a message and continues execution without terminating.
+
+![SIGTERM Handling](Snapshots/step_4.png)
+---
+
+### 7. Handling SIGINT Signal and Graceful Exit
+
+- After 10 seconds, the second child process sends a `SIGINT` signal to the parent process.
+- The parent process handles SIGINT differently and exits gracefully after cleaning up child processes.
+
+![SIGINT Handling](Snapshots/step_5.png)
+
 
