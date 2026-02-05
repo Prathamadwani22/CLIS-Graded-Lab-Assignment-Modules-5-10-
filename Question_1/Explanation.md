@@ -1,28 +1,28 @@
+---
+
+### 1. Creating the Shell Script File
+
 # Question 1
 
 ### Shell Script Analysis (analyze.sh)
 
-The objective of this question is to create a shell script that accepts exactly one command-line argument and performs analysis based on whether the argument is a file or a directory, with proper error handling.
----
-
-### 1. Creating the Shell Script File
----
+$ touch analyze.sh
 - This command creates an empty shell script file named `analyze.sh` which will be used to implement the required logic.
 
 ![Create Script](Snapshots/step_1.png)
+
 ---
 
 ### 2. Writing the Script Logic
 
 $ nano analyze.sh
-- This command opens the `analyze.sh` file in the nano editor to write the shell script that handles file analysis, directory analysis, and error cases.
+- This command opens the `analyze.sh` file in the nano editor to write the shell script logic.
 
 ![Write Script](Snapshots/step_2.png)
----
+
 ---
 
 ### 3. Shell Script Implementation
-
 ```bash
 #!/bin/bash
 
@@ -57,15 +57,9 @@ elif [ -d "$1" ]; then
 else
     echo "Error: Invalid input."
 fi
-The script validates the argument count, checks whether the path exists, and performs file or directory analysis accordingly.
+```
+- The script validates the argument count, checks whether the path exists, and performs file or directory analysis accordingly.
 
-
-
-## 🔹 STEP 7: Add Step 4 – Make script executable
-
-Paste:
-
-```md
 ---
 
 ### 4. Making the Script Executable
@@ -74,45 +68,4 @@ $ chmod +x analyze.sh
 - This command grants execute permission to the shell script so it can be run directly from the terminal.
 
 ![Make Executable](Snapshots/step_3.png)
----
-
-### 5. Creating a Sample File for Testing
-
-$ echo "Hello world this is a test file" > sample.txt
-- This command creates a sample text file to test the file analysis functionality of the script.
-
-![Create Sample File](Snapshots/step_4.png)
-[sample.txt](sample.txt)
----
-
-### 6. Executing Script with File Argument
-
-$ ./analyze.sh sample.txt
-- The script identifies the argument as a file and displays the number of lines, words, and characters present in it.
-
-![File Analysis Output](Snapshots/step_5.png)
----
-
-### 7. Executing Script with Directory Argument
-
-$ ./analyze.sh .
-- The script identifies the argument as a directory and displays the total number of files and the number of `.txt` files present.
-
-![Directory Analysis Output](Snapshots/step_6.png)
----
-
-### 8. Executing Script with No Arguments
-
-$ ./analyze.sh
-- Since no argument is provided, the script correctly displays an error message for invalid argument count.
-
-![No Argument Error](Snapshots/step_7.png)
----
-
-### 9. Executing Script with Invalid Path
-
-$ ./analyze.sh invalid_path
-- The script detects that the provided path does not exist and displays an appropriate error message.
-
-![Invalid Path Error](Snapshots/step_8.png)
 
