@@ -19,6 +19,7 @@ $ nano analyze.sh
 
 ![Write Script](Snapshots/step_2.png)
 ---
+---
 
 ### 3. Shell Script Implementation
 
@@ -56,10 +57,9 @@ elif [ -d "$1" ]; then
 else
     echo "Error: Invalid input."
 fi
-
-
 The script validates the argument count, checks whether the path exists, and performs file or directory analysis accordingly.
----
+
+
 
 ## 🔹 STEP 7: Add Step 4 – Make script executable
 
