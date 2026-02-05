@@ -7,10 +7,6 @@ The objective of this question is to create a shell script that accepts exactly 
 
 ### 1. Creating the Shell Script File
 ---
-
-### 1. Creating the Shell Script File
-
-
 - This command creates an empty shell script file named `analyze.sh` which will be used to implement the required logic.
 
 ![Create Script](Snapshots/step_1.png)
@@ -60,6 +56,15 @@ elif [ -d "$1" ]; then
 else
     echo "Error: Invalid input."
 fi
+(Three backticks, nothing else, on a new line)
+
+### ✅ It must look like this:
+
+```md
+elif [ -d "$1" ]; then
+    ...
+fi
+
 The script validates the argument count, checks whether the path exists, and performs file or directory analysis accordingly.
 ---
 
