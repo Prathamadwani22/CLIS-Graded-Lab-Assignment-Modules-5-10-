@@ -4,16 +4,18 @@
 ---
 
 ### 1. Creating the Email Cleaner Script
-
+```bash
 $ touch emailcleaner.sh
+```
 - This command creates an empty shell script file that will be used to extract and classify email addresses.
 
 ![Create Script](Snapshots/step_1.png)
 ---
 
 ### 2. Writing the Script Logic
-
+```bash
 $ nano emailcleaner.sh
+```
 - This command opens the `emailcleaner.sh` file in the nano editor to write the logic for extracting valid and invalid email addresses.
 
 ![Write Script](Snapshots/step_2.png)
@@ -44,16 +46,18 @@ echo "Invalid emails saved in invalid.txt"
 
 ### 4. Making the Script Executable
 
-
+```bash
 $ chmod +x emailcleaner.sh
+```
 - This command grants execute permission to the email cleaner script so it can be run directly from the terminal.
 
 ![Make Executable](Snapshots/step_3.png)
 ---
 
 ### 5. Creating the Emails File for Testing
-
+```bash
 $ nano emails.txt
+```
 - This command creates a file containing a mix of valid and invalid email addresses for testing the script.
 
 ![Create Emails File](Snapshots/step_4.png)
@@ -61,26 +65,29 @@ $ nano emails.txt
 ---
 
 ### 6. Executing the Email Cleaner Script
-
+```bash
 $ ./emailcleaner.sh
+```
 - This command runs the script, extracts valid and invalid email addresses, removes duplicate valid entries, and stores the results in separate files.
 
 ![Run Script](Snapshots/step_5.png)
 ---
 
 ### 7. Viewing the Generated Output Files
-
+```bash
 $ cat valid.txt
 $ cat invalid.txt
+```
 - These commands display the contents of the files containing valid and invalid email addresses after processing.
 
 ![View Output](Snapshots/step_6.png)
 ---
 
 ### 8. Handling Missing Emails File
-
+```bash
 $ rm emails.txt
 $ ./emailcleaner.sh
+```
 - This command tests the script behavior when the input file is missing, and the script displays an appropriate error message.
 
 ![Error Handling](Snapshots/step_7.png)
