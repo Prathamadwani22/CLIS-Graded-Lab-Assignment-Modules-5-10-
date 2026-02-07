@@ -5,9 +5,11 @@
 ### 1. Creating the Shell Script File
 
 ### Shell Script Analysis (analyze.sh)
+
 ```bash
 $ touch analyze.sh
 ```
+
 - This command creates an empty shell script file named `analyze.sh` which will be used to implement the required logic.
 
 ![Create Script](Snapshots/step_1.png)
