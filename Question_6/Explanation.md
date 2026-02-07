@@ -4,7 +4,9 @@
 ---
 
 ### 1. Creating the Text Metrics Script
-
+```bash
+$ touch metrics.sh
+```
 
 - This command creates an empty shell script file that will be used to analyze word-level metrics from a text file.
 
@@ -12,8 +14,9 @@
 ---
 
 ### 2. Writing the Script Logic
-
+```bash
 $ nano metrics.sh
+```
 - This command opens the `metrics.sh` file in the nano editor to write the logic for analyzing word-level metrics from the input text file.
 
 ![Write Script](Snapshots/step_2.png)
@@ -58,16 +61,18 @@ echo "Total unique words: $unique_count"
 ---
 
 ### 4. Making the Script Executable
-
+```bash
 $ chmod +x metrics.sh
+```
 - This command grants execute permission to the text metrics analysis script so it can be run directly from the terminal.
 
 ![Make Executable](Snapshots/step_3.png)
 ---
 
 ### 5. Creating the Input Text File for Testing
-
+```bash
 $ nano input.txt
+```
 - This command creates a text file containing sample content to test the metrics script.
 
 ![Create Input File](Snapshots/step_4.png)
@@ -75,17 +80,19 @@ $ nano input.txt
 ---
 
 ### 6. Executing the Metrics Script
-
+```bash
 $ ./metrics.sh
+```
 - This command runs the script and displays the longest word, shortest word, average word length, and total number of unique words.
 
 ![Run Script](Snapshots/step_5.png)
 ---
 
 ### 7. Handling Missing Input File
-
+```bash
 $ rm input.txt
 $ ./metrics.sh
+```
 - This command tests the script behavior when the input file is missing, and the script displays an appropriate error message.
 
 ![Error Handling](Snapshots/step_6.png)
