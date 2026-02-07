@@ -4,16 +4,18 @@
 ---
 
 ### 1. Creating the Signal Handling C Program
-
+```bash
 $ touch signal_demo.c
+```
 - This command creates an empty C source file that will be used to demonstrate signal handling using multiple processes.
 
 ![Create C File](Snapshots/step_1.png)
 ---
 
 ### 2. Writing the Program Logic
-
+```bash
 $ nano signal_demo.c
+```
 - This command opens the C source file to implement signal handlers in the parent process and child processes that send signals after fixed delays.
 
 ![Write Program](Snapshots/step_2.png)
@@ -93,16 +95,18 @@ int main() {
 ---
 
 ### 4. Compiling the Signal Handling Program
-
+```bash
 $ gcc signal_demo.c -o signal_demo
+```
 - This command compiles the C program implementing signal handling into an executable file.
 
 ![Compile Program](Snapshots/step_3.png)
 ---
 
 ### 5. Executing the Signal Handling Program
-
+```bash
 $ ./signal_demo
+```
 - This command runs the parent process indefinitely while child processes send SIGTERM and SIGINT signals after fixed delays.
 
 ![Run Program](Snapshots/step_4.png)
