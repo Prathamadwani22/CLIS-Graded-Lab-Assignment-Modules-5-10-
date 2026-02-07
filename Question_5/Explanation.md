@@ -4,16 +4,18 @@
 ---
 
 ### 1. Creating the Directory Comparison Script
-
+```bash
 $ touch sync.sh
+```
 - This command creates an empty shell script file that will be used to compare the contents of two directories.
 
 ![Create Script](Snapshots/step_1.png)
 ---
 
 ### 2. Writing the Script Logic
-
+```bash
 $ nano sync.sh
+```
 - This command opens the `sync.sh` file in the nano editor to write the logic for comparing files present in two directories without modifying them.
 
 ![Write Script](Snapshots/step_2.png)
@@ -59,44 +61,49 @@ done
 ---
 
 ### 4. Making the Script Executable
-
+```bash
 $ chmod +x sync.sh
+```
 - This command grants execute permission to the directory comparison script so it can be run directly from the terminal.
 
 ![Make Executable](Snapshots/step_3.png)
 ---
 
 ### 5. Creating Test Directories and Files
-
+```bash
 $ mkdir dirA dirB
 $ echo "Hello World" > dirA/file1.txt
 $ echo "Hello World" > dirB/file1.txt
 $ echo "Only in A" > dirA/file2.txt
 $ echo "Only in B" > dirB/file3.txt
+```
 - These commands create two test directories and populate them with files to demonstrate files unique to each directory and files with matching content.
 
 ![Create Directories](Snapshots/step_4.png)
 ---
 
 ### 6. Modifying a Common File to Test Differences
-
+```bash
 $ echo "Different content" > dirB/file1.txt
+```
 - This command modifies a common file in `dirB` to ensure the script detects content differences.
 
 ![Modify File](Snapshots/step_5.png)
 ---
 
 ### 7. Executing the Directory Comparison Script
-
+```bash
 $ ./sync.sh dirA dirB
+```
 - This command runs the script, lists files unique to each directory, and compares contents of common files.
 
 ![Run Script](Snapshots/step_6.png)
 ---
 
 ### 8. Handling Invalid Directory Arguments
-
+```bash 
 $ ./sync.sh dirA invalidDir
+```
 - This command tests the script behavior when an invalid directory is provided and displays an appropriate error message.
 
 ![Error Handling](Snapshots/step_7.png)
