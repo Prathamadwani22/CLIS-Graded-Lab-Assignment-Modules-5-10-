@@ -4,15 +4,17 @@
 ---
 
 ### 1. Creating the Log Analysis Script
-
+```bash
 $ touch log_analyze.sh
+```
 - This command creates an empty shell script file that will be used to analyze the log file and generate a summary report.
 
 ![Create Script](Snapshots/step_1.png)---
 
 ### 2. Writing the Script Logic
-
+```bash
 $ nano log_analyze.sh
+```
 - This command opens the `log_analyze.sh` file in the nano editor to write the logic for validating the log file, analyzing log entries, and generating a summary report.
 
 ![Write Script](Snapshots/step_2.png)
@@ -74,16 +76,18 @@ echo "Summary report generated: $report_file"
 ---
 
 ### 4. Making the Script Executable
-
+```bash
 $ chmod +x log_analyze.sh
+```
 - This command grants execute permission to the log analysis script so it can be run directly from the terminal.
 
 ![Make Executable](Snapshots/step_3.png)
 ---
 
 ### 5. Creating a Sample Log File for Testing
-
+```bash
 $ nano sample.log
+```
 - This command creates a sample log file containing entries with INFO, WARNING, and ERROR levels for testing the script.
 
 ![Create Log File](Snapshots/step_4.png)
@@ -91,32 +95,36 @@ $ nano sample.log
 ---
 
 ### 6. Executing Script with Log File Argument
-
+```bash
 $ ./log_analyze.sh sample.log
+```
 - This command runs the script with the log file as input and displays log statistics while generating a summary report.
 
 ![Run Script](Snapshots/step_5.png)
 ---
 
 ### 7. Viewing the Generated Summary Report
-
+```bash
 $ cat logsummary_<date>.txt
+```
 - This command displays the contents of the generated log summary report file to verify the analysis results.
 
 ![View Report](Snapshots/step_6.png)
 ---
 
 ### 8. Executing Script with No Arguments
-
+```bash
 $ ./log_analyze.sh
+```
 - Since no argument is provided, the script displays a meaningful error message indicating incorrect usage.
 
 ![No Argument Error](Snapshots/step_7.png)
 ---
 
 ### 9. Executing Script with Invalid File Name
-
+```bash
 $ ./log_analyze.sh invalid.log
+```
 - This command tests the script with a non-existent log file, and the script displays an appropriate error message.
 
 ![Invalid File Error](Snapshots/step_8.png)
