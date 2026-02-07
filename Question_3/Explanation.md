@@ -4,13 +4,18 @@
 ---
 
 ### 1. Creating the Result Validation Script
-
+```bash
 $ touch validate_results.sh
+```
 - This command creates an empty shell script file that will be used to validate student results based on marks.
 
 ![Create Script](Snapshots/step_1.png)
+---
 
+### 2. Writing the Script Logic
+```bash
 $ nano validate_results.sh
+```
 - This command opens the `validate_results.sh` file in the nano editor to write the logic for reading student marks, validating results, and categorizing students.
 
 ![Write Script](Snapshots/step_2.png)
@@ -78,16 +83,18 @@ echo "Students passed in all subjects: $passed_all"
 
 ### 4. Making the Script Executable
 
-
+```bash
 $ chmod +x validate_results.sh
+```
 - This command grants execute permission to the result validation script so it can be run directly from the terminal.
 
 ![Make Executable](Snapshots/step_3.png)
 ---
 
 ### 5. Creating the Marks File for Testing
-
+```bash
 $ nano marks.txt
+```
 - This command creates a marks file containing student roll numbers, names, and marks for three subjects to test the script.
 
 ![Create Marks File](Snapshots/step_4.png)
@@ -95,17 +102,19 @@ $ nano marks.txt
 ---
 
 ### 6. Executing the Result Validation Script
-
+```bash
 $ ./validate_results.sh
+```
 - This command runs the script, reads student data from `marks.txt`, displays students who failed in exactly one subject, students who passed all subjects, and prints the count for each category.
 
 ![Run Script](Snapshots/step_5.png)
 ---
 
 ### 7. Handling Missing Marks File
-
+```bash
 $ rm marks.txt
 $ ./validate_results.sh
+```
 - This command tests the script when the marks file is missing, and the script displays an appropriate error message.
 
 ![Error Handling](Snapshots/step_6.png)
